@@ -16,7 +16,8 @@ const button = document.getElementById('regBtn');
 
 const para = document.querySelector("alert-danger");
 button.addEventListener("click", (e) => {
-  if (nombre.value === "" || apellido.value === "" || email.value === "" || password1.value === "" || password2.value === "" && terminos.value === false) {
+  if (nombre.value === "" || apellido.value === "" || email.value === "" || password1.value === "" || password2.value === "" && terminos.value === false ||
+  password1.value!==password2.value || password1.value.length < 6) {
     e.preventDefault();
     showAlertError();
   } else {
